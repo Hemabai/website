@@ -15,5 +15,8 @@ node('Slave1') {
     stage('Dply new image container') {
               // ** Deploy container from new image **
               sh label: 'mstr', script: 'sudo docker run -it -d -p=90:80 websitemstr'
-    }     
+    }   
+    stage('Record FP')) {
+              fingerprint ''
+    }    
 }        
